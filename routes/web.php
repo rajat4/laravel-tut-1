@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Route::get('/', function () {
     return view('hello');
@@ -22,4 +25,7 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::view("users","users")
+// Route::view("users","users");
+Route::get('/users', function () {
+    return view('users');
+});
