@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UploadController;
+use App\Http\Controllers\MembersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +30,11 @@ Route::get('/contact', function () {
 Route::get('/users', function () {
     return view('users');
 });
+
+Route::view('upload','upload');
+
+Route::post('upload',[UploadController::class, 'index']);
+
+Route::view('add','addmember');
+
+Route::post('add',[MembersController::class,'addData']);
