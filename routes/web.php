@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\MembersController;
+use App\Resources\views\welcome1;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +18,10 @@ use App\Http\Controllers\MembersController;
 */
 Route::get('/welcome', function () {
     return view('welcome');
+});
+
+Route::get('/welcome1', function () {
+    return view('welcome1');
 });
 
 Route::get('/', function () {
@@ -31,6 +38,10 @@ Route::get('/users', function () {
     return view('users');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
 Route::view('upload','upload');
 
 Route::post('upload',[UploadController::class, 'index']);
@@ -38,3 +49,5 @@ Route::post('upload',[UploadController::class, 'index']);
 Route::view('add','addmember');
 
 Route::post('add',[MembersController::class,'addData']);
+
+Route::get("users1",[UserController::class,'index']);
