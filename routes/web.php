@@ -5,6 +5,7 @@ use App\Http\Controllers\UploadController;
 use App\Http\Controllers\MembersController;
 use App\Resources\views\welcome1;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,3 +58,6 @@ Route::get('/home1/{name?}', function ($name = "RAM"){
     $data = "Rajat";
     return view('home1')->with($data);
 });
+
+Route::get('/register',[RegistrationController::class,'index']);
+Route::post('/register',[RegistrationController::class,'register']);
