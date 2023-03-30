@@ -11,6 +11,6 @@ class UserController extends Controller
     //
     function index(){
         echo "db connection will be here";
-        // echo DB::select("select * from users");
+        // return DB::select("select * from users");
     }
 }
