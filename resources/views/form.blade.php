@@ -32,6 +32,12 @@
             class="form-control" name="password" id="" aria-describedby="helpId" placeholder="">
           <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
         </div>
+        <div class="form-group">
+          <label for="">Confirm Password</label>
+          <input type="password"
+            class="form-control" name="confirm_password" id="" aria-describedby="helpId" placeholder="">
+          <!-- <small id="helpId" class="form-text text-muted">Help text</small> -->
+        </div>
         
             <button type="submit" class="btn btn-primary">
                 Submit
