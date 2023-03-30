@@ -51,3 +51,9 @@ Route::view('add','addmember');
 Route::post('add',[MembersController::class,'addData']);
 
 Route::get("users1",[UserController::class,'index']);
+
+Route::get('/home1/{name?}', function ($name = "RAM"){
+    // $data = compact($name);
+    $data = "Rajat";
+    return view('home1')->with($data);
+});
