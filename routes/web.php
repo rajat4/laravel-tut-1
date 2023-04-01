@@ -6,6 +6,7 @@ use App\Http\Controllers\MembersController;
 use App\Resources\views\welcome1;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\Site;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,3 +62,6 @@ Route::get('/home1/{name?}', function ($name = "RAM"){
 
 Route::get('/register',[RegistrationController::class,'index']);
 Route::post('/register',[RegistrationController::class,'register']);
+
+// Route::get("/first","Site@first");
+Route::get("/first",[Site::class, "first"]);
