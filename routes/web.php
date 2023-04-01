@@ -64,4 +64,8 @@ Route::get('/register',[RegistrationController::class,'index']);
 Route::post('/register',[RegistrationController::class,'register']);
 
 // Route::get("/first","Site@first");
-Route::get("/first",[Site::class, "first"]);
+// Route::get("/first",[Site::class, "first"]);
+
+Route::get("/first", function(){
+    return view("first");
+});
