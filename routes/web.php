@@ -7,7 +7,7 @@ use App\Resources\views\welcome1;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\Site;
-
+use App\Http\Controllers\ServiceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,3 +69,25 @@ Route::post('/register',[RegistrationController::class,'register']);
 Route::get("/first", function(){
     return view("first");
 });
+
+// Route::get("/services", function(){
+//     return view("services");
+// });
+
+// Route::get("/services", [ServiceController::class, "index"]);
+
+Route::view("services", "services");
+
+Route::get("/about-us", function(){
+    echo "<h1>This is sample message</h1>";
+});
+Route::redirect("/products", "/about-us");
+
+Route::get("/list-view", function(){
+    echo "<h1>This is list view page</h1>";
+});
+Route::get("/add-form", function(){
+    // echo "<h1>This is add form page</h1>";
+    return redirect("/list-view");
+});
+
