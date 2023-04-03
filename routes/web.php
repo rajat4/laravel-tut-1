@@ -76,7 +76,7 @@ Route::get("/first", function(){
 
 // Route::get("/services", [ServiceController::class, "index"]);
 
-Route::view("services", "services");
+Route::view("services", "services", [ "name" => "test name", "email" => "test@test.com"]);
 
 // Route::get("/about-us", function(){
 //     echo "<h1>This is sample message</h1>";

@@ -9,6 +9,9 @@ class ServiceController extends Controller
 {
     public function index()
     {
-        return view("services");
+        $email = "rajat.thawal@crestit.in";
+        $name = "Rajat Thawal";
+        
+        return view("services", compact("email", "name"));
     }
 }
