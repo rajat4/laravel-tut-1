@@ -78,9 +78,9 @@ Route::get("/first", function(){
 
 Route::view("services", "services");
 
-Route::get("/about-us", function(){
-    echo "<h1>This is sample message</h1>";
-});
+// Route::get("/about-us", function(){
+//     echo "<h1>This is sample message</h1>";
+// });
 Route::redirect("/products", "/about-us");
 
 Route::get("/list-view", function(){
@@ -89,5 +89,10 @@ Route::get("/list-view", function(){
 Route::get("/add-form", function(){
     // echo "<h1>This is add form page</h1>";
     return redirect("/list-view");
+});
+
+Route::get("/about-us", function(){
+    $data = ["email" => "rajat.thawal@crestit.in", "name" => "Rajat Thawal"];
+    return view("about1",  $data );
 });
 
