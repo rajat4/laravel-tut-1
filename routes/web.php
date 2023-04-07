@@ -96,3 +96,4 @@ Route::get("/about-us", function(){
     return view("about1",  $data );
 });
 
+Route::view('login','login');
