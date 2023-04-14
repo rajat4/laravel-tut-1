@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\Site;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,9 +27,9 @@ Route::get('/welcome1', function () {
     return view('welcome1');
 });
 
-Route::get('/', function () {
-    return view('hello');
-});
+Route::get('/', [HomeController::class,'HomeIndex']); 
+Route::post('dataInsert',[HomeController::class,'DataInsert']) ;
+
 Route::get('/about', function () {
     return view('about');
 });
@@ -97,3 +98,7 @@ Route::get("/about-us", function(){
 });
 
 Route::view('login','login');
+
+Route::get('/form', function(){
+    return view("form");
+});
